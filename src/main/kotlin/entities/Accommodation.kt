@@ -10,6 +10,7 @@ data class Accommodation(
     val rentPrice: Price,
     val slug: String,
     val location: Location,
+    val locationLabel: LocationLabel,
 )
 
 @NoArg
@@ -37,4 +38,9 @@ data class Street(
 @NoArg
 data class MapDetails(
     val radius: Int,
+)
+
+@NoArg
+data class LocationLabel(
+    val value: String,
 )

@@ -1,3 +1,5 @@
+package utilities
+
 import kotlin.time.Duration.Companion.seconds
 
 class Scheduler {
