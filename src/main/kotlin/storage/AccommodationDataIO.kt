@@ -2,7 +2,7 @@ package storage
 
 import com.fasterxml.jackson.databind.JsonNode
 import entities.Accommodation
-import request.Converter
+import converters.Converter
 import java.io.File
 
 class AccommodationDataIO {
@@ -24,6 +24,5 @@ class AccommodationDataIO {
                 .map(JsonNode::toString)
                 .map { Converter.mapper.readValue(it, Accommodation::class.java) }
         }
-
     }
 }

@@ -2,10 +2,10 @@ package storage
 
 import entities.Accommodation
 
-class AccommodationDataComperator {
+class AccommodationDataComparator {
     companion object {
         fun getNewAccommodations(oldDataset: List<Accommodation>, newDataset: List<Accommodation>): List<Accommodation> {
-            return oldDataset.filterNot { oldItem -> newDataset.any { newItem -> oldItem.id == newItem.id } }
+            return newDataset.filterNot { newItem -> oldDataset.any { oldItem -> newItem.id == oldItem.id } }
         }
     }
 }
